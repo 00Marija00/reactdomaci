@@ -3,6 +3,7 @@ import {KontaktiAplikacija} from './components/layout/stranice/KontaktiAplikacij
 import {Header} from './components/layout/Header';
 import {Footer} from './components/layout/Footer';
 import {Route, Routes} from "react-router-dom"
+import {Paginacija} from './components/layout/stranice/Paginacija';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
     <Routes> 
 
     <Route path="/" element={<KontaktiAplikacija />} />
-    <Route/>
+    <Route path="/paginacija" element={<Paginacija />} />
 
     </Routes>
 

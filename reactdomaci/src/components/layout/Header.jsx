@@ -19,7 +19,7 @@ export function Header(){
           <Link className="new-nav-link active text-uppercase" aria-current="page" to="/">Početna</Link>
         </li>
         <li className="new-nav-item">
-          <Link className="new-nav-link text-uppercase" to="/onama">O nama</Link>
+          <Link className="new-nav-link text-uppercase" to="/paginacija">Pretraga mejlova po stranama</Link>
         </li>
       </ul>
     </div>
