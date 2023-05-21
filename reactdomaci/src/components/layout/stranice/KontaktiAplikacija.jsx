@@ -1,7 +1,7 @@
 import React, {useRef, useEffect} from 'react'
 import Title from '../../Title'
 
-
+import Data from "../../../Data.json";
 
 
 export default function KontaktiAplikacija() {
@@ -20,7 +20,13 @@ export default function KontaktiAplikacija() {
 
         <input type="text" placeholder="Kljuc za pretragu kontakata..." className="mb-2" style={{padding:".5rem 7rem"}} ref={inputSearch}/>
 
-        <section className="d-flex" style={{gap:15, maxWidth:1600, margin:"auto"}}></section>
+        <section className="d-flex" style={{gap:15, maxWidth:1600, margin:"auto"}}>
+
+            {Data.map((contact) => <ul>
+                <li>{contact.last_name}</li>
+            </ul>)}
+
+        </section>
 
     </div>
   )
