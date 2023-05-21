@@ -2,7 +2,7 @@ import React, {useRef, useEffect} from 'react'
 import Title from '../../Title'
 
 import Data from "../../../Data.json";
-
+import Kontakt from './Kontakt';
 
 export default function KontaktiAplikacija() {
   
@@ -20,11 +20,11 @@ export default function KontaktiAplikacija() {
 
         <input type="text" placeholder="Kljuc za pretragu kontakata..." className="mb-2" style={{padding:".5rem 7rem"}} ref={inputSearch}/>
 
-        <section className="d-flex" style={{gap:15, maxWidth:1600, margin:"auto"}}>
+        <section className="d-flex text-left" style={{gap:15, maxWidth:1600, margin:"auto", flexWrap:"wrap"}}>
 
-            {Data.map((contact) => <ul>
-                <li>{contact.last_name}</li>
-            </ul>)}
+            {Data.map((kontakt) => 
+                <Kontakt kontakt={kontakt}/>
+            )}
 
         </section>
 
